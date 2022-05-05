@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element audit="true" extends="task" label="NeedIt" max_length="40" name="x_58872_needit_needit" sizeclass="3" type="collection">
+        <element attributes="edge_encryption_enabled=true" choice="3" default="USA" label="Location" mandatory="true" max_length="40" name="u_location" type="string">
+            <choice>
+                <element inactive_on_update="false" label="Choice 1" sequence="0" value="USA"/>
+                <element inactive_on_update="false" label="Choice 2" sequence="1" value="Canada"/>
+                <element inactive_on_update="false" label="Choice 3" sequence="2" value="Mexico"/>
+            </choice>
+        </element>
+        <element label="New field  1" max_length="40" name="u_new_field_1" type="integer"/>
+        <element attributes="encode_utf8=false" label="Requested for" mandatory="true" max_length="32" name="u_requested_for" reference="sys_user" type="reference"/>
+        <element attributes="edge_encryption_enabled=true" choice="3" default="legal" label="Requested type" mandatory="true" max_length="40" name="u_requested_type" type="string">
+            <choice>
+                <element inactive_on_update="false" label="Human Resources" sequence="0" value="hr"/>
+                <element inactive_on_update="false" label="Facilities" sequence="1" value="facilities"/>
+                <element inactive_on_update="false" label="Legal" sequence="2" value="legal"/>
+                <element inactive_on_update="false" label="Information technology" sequence="3" value="it"/>
+            </choice>
+        </element>
+        <element label="Serial number" max_length="40" name="u_serial_number" type="integer"/>
+        <element attributes="edge_encryption_enabled=true" choice="3" default="hr 1" label="What needed" mandatory="true" max_length="40" name="u_what_needed" type="string">
+            <choice>
+                <element inactive_on_update="false" label="HR 1" sequence="0" value="hr 1"/>
+                <element inactive_on_update="false" label="HR 2" sequence="1" value="hr 2"/>
+                <element inactive_on_update="false" label="F 1" sequence="2" value="f 1"/>
+                <element inactive_on_update="false" label="F 2" sequence="3" value="f 2"/>
+                <element inactive_on_update="false" label="Legal 1" sequence="4" value="legal 1"/>
+                <element inactive_on_update="false" label="Legal 2" sequence="5" value="legal 2"/>
+            </choice>
+        </element>
+        <element attributes="edge_encryption_enabled=true" label="When needed" mandatory="true" max_length="40" name="u_when_needed" type="glide_date_time"/>
+    </element>
+</database>
